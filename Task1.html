@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Box Model + Flexbox Tasks</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .box {
+      background-color: lightblue;
+      border: 3px solid black;
+      margin: 20px;
+      padding: 15px;
+      text-align: center;
+    }
+    .different-padding {
+      background-color: lightcoral;
+      border: 3px solid black;
+      margin: 20px;
+      padding: 10px 20px 30px 40px; /* top right bottom left */
+      text-align: center;
+    }
+    .side-by-side-container {
+      display: flex;
+      gap: 20px;
+    }
+    .padding-box {
+      background-color: lightgreen;
+      border: 2px solid black;
+      padding: 30px;
+    }
+    .margin-box {
+      background-color: lightpink;
+      border: 2px solid black;
+      margin: 30px;
+    }
+    .flex-container {
+      display: flex;
+      gap: 20px;
+    }
+    .flex-item {
+      background-color: lightseagreen;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      flex: 1;
+    }
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      background-color: lightgray;
+      margin-top: 30px;
+    }
+    .flex-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .flex-wrap-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .small-box {
+      background-color: lightsalmon;
+      padding: 20px;
+      flex: 0 0 100px;
+      text-align: center;
+    }
+    /* Bonus Challenge */
+    .profile-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f3f3f3;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+      margin: 20px auto;
+    }
+    .profile-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+    .button-row button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: steelblue;
+      color: white;
+      cursor: pointer;
+    }
+    .feature-grid {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .feature {
+      background-color: lightgoldenrodyellow;
+      padding: 20px;
+      border: 2px solid #ccc;
+      width: 120px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Task 1: Basic Box -->
+<h2>Task 1: Basic Box</h2>
+<div class="box">
+  Hello World
+</div>
+
+<!-- Task 2: Different Paddings -->
+<h2>Task 2: Different Paddings</h2>
+<div class="different-padding">
+  Different Padding on each side
+</div>
+
+<!-- Task 3: Margin vs Padding -->
+<h2>Task 3: Margin vs Padding</h2>
+<div class="side-by-side-container">
+  <div class="padding-box">Increased Padding</div>
+  <div class="margin-box">Increased Margin</div>
+</div>
+
+<!-- Task 4: Flex Row Alignment -->
+<h2>Task 4: Flex Row Alignment</h2>
+<div class="flex-container">
+  <div class="flex-item">Box 1</div>
+  <div class="flex-item">Box 2</div>
+  <div class="flex-item">Box 3</div>
+</div>
+
+<!-- Task 5: Center Content with Flexbox -->
+<h2>Task 5: Center Content with Flexbox</h2>
+<div class="flex-center">
+  <div class="flex-item">Centered Box</div>
+</div>
+
+<!-- Task 6: Flex Column Layout -->
+<h2>Task 6: Flex Column Layout</h2>
+<div class="flex-column">
+  <div class="flex-item">Box A</div>
+  <div class="flex-item">Box B</div>
+  <div class="flex-item">Box C</div>
+</div>
+
+<!-- Task 7: Add Gap Between Flex Items -->
+<h2>Task 7: Add Gap Between Flex Items</h2>
+<div class="flex-container" style="gap: 20px;">
+  <div class="flex-item">Gap Box 1</div>
+  <div class="flex-item">Gap Box 2</div>
+  <div class="flex-item">Gap Box 3</div>
+</div>
+
+<!-- Task 8: Responsive Flexbox Challenge -->
+<h2>Task 8: Responsive Flexbox Challenge</h2>
+<div class="flex-wrap-container">
+  <div class="small-box">1</div>
+  <div class="small-box">2</div>
+  <div class="small-box">3</div>
+  <div class="small-box">4</div>
+  <div class="small-box">5</div>
+</div>
+
+<!-- Bonus Challenge: Profile Card -->
+<h2>Bonus: Profile Card</h2>
+<div class="profile-card">
+  <img src="https://via.placeholder.com/100" alt="Profile Picture">
+  <h3>John Doe</h3>
+  <p>Web Developer</p>
+</div>
+
+<!-- Bonus Challenge: Button Row -->
+<h2>Bonus: Button Row</h2>
+<div class="button-row">
+  <button>Button 1</button>
+  <button>Button 2</button>
+  <button>Button 3</button>
+</div>
+
+<!-- Bonus Challenge: Feature Grid -->
+<h2>Bonus: Feature Grid</h2>
+<div class="feature-grid">
+  <div class="feature">Fast</div>
+  <div class="feature">Secure</div>
+  <div class="feature">Easy</div>
+  <div class="feature">Powerful</div>
+</div>
+
+</body>
+</html>

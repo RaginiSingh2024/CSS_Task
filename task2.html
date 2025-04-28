@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Layout Foundations</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    /* Task 1: Profile Card */
+    .card {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      background-color: #f4f4f4;
+      margin-bottom: 40px;
+    }
+    .card .image img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .card .info {
+      flex-grow: 1;
+    }
+    .card .info h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #333;
+    }
+    .card .info p {
+      color: #666;
+    }
+
+    /* Task 2: Navigation Bar */
+    .navbar {
+      background-color: #333;
+      margin-bottom: 40px;
+      border-radius: 8px;
+    }
+    .navbar ul {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      padding: 10px 0;
+    }
+    .navbar li {
+      margin: 0 10px;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 8px 12px;
+    }
+    .navbar a:hover {
+      background-color: #555;
+      border-radius: 4px;
+    }
+
+    /* Task 3: 3-Column Layout */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    .sidebar {
+      width: 200px;
+      padding: 20px;
+      background-color: #d3d3d3;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #add8e6;
+      margin: 0 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .container {
+        flex-direction: column;
+      }
+      .sidebar, .main-content {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 2: Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Task 1: Profile Card -->
+  <div class="card">
+    <div class="image">
+      <img src="https://via.placeholder.com/150" alt="Profile Image">
+    </div>
+    <div class="info">
+      <h2>John Doe</h2>
+      <p>Web Developer with a passion for coding and design.</p>
+    </div>
+  </div>
+
+  <!-- Task 3: 3-Column Layout -->
+  <div class="container">
+    <div class="sidebar left">Left Sidebar</div>
+    <div class="main-content">Main Content</div>
+    <div class="sidebar right">Right Sidebar</div>
+  </div>
+
+  <!-- Optional Footer -->
+  <footer>
+    © 2025 Your Website. All rights reserved.
+  </footer>
+
+</body>
+</html>
